@@ -1,2 +1,2 @@
-# PHP
-basic PHP code 
+# HTML
+basic HTML code 
