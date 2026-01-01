@@ -1,0 +1,209 @@
+<!doctype html>
+<html lan="en">
+<head>
+<meta name="view point"width="device-width,initial-scale="1.0">
+<title>www.ku.com</title>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script type="text/javascript" language="javascript">
+function formvalidate()
+{
+	var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var fname = document.forms['regForm']['fname'].value;
+	var lname = document.forms['regForm']['lname'].value;
+    var fhname = document.forms['regForm']['fhname'].value;
+	var mhname = document.forms['regForm']['mhname'].value;
+	var add= document.forms['regForm']['add'].value;
+	var cname = document.forms['regForm']['cname'].value;
+	var sname = document.forms['regForm']['sname'].value;
+	var phoneNumber = document.forms['regForm']['phoneNumber'].value;
+	var PinCode = document.forms['regForm']['PinCode'].value;
+	var Relegion = document.forms['regForm']['Relegion'].value;
+	var DOB = document.forms['regForm']['DOB'].value;
+	var email = document.forms['regForm']['email'].value;
+	var p = document.forms['regForm']['p'].value;
+	var p1 = document.forms['regForm']['p1'].value;
+	var f1 = document.forms['regForm']['f1'].value;
+	
+	/*if(fname == ""){
+		alert("Please enter your firstname");
+		return false;
+	}*/
+	if(fname == ""){
+		document.getElementById("msg-fname").innerHTML="Please enter your firstname";
+		return false;
+	}else{
+	document.getElementById("msg-fname").innerHTML="";
+	}
+	/*if(lname == ""){
+		alert("Please enter your lastname");
+		return false;
+	}*/
+	if(lname == ""){
+		document.getElementById("msg-lname").innerHTML="Please enter your lastname";
+		return false;
+	}else{
+	document.getElementById("msg-lname").innerHTML="";
+	}
+	if(fhname == ""){
+		alert("Please enter your fathername");
+		return false;
+	}
+	if(mhname == ""){
+		alert("Please enter your mothername");
+		return false;
+	}
+	if(add == ""){
+		alert("Please enter your address");
+		return false;
+	}
+	if(cname == ""){
+		alert("Please enter your city");
+		return false;
+	}
+	if(sname == ""){
+		alert("Please enter your state");
+		return false;
+	}
+	if(phoneNumber == ""){
+		alert("Please enter your Phone Number");
+		return false;
+	}
+	if(PinCode == ""){
+		alert("Please enter your Pin Code");
+		return false;
+	}
+	if(Relegion == 0){
+		alert("Please select your Relegion");
+		return false;
+	}
+	if(DOB == ""){
+		alert("Please enter your DOB");
+		return false;
+	}
+	if(email == ""){
+		alert("Please enter your email");
+		return false;
+	}
+	if(email.match(mailformat)){
+		return true;
+	}else {
+		alert("Please enter valid email address");
+		return false;
+	}
+	if(p == ""){
+		alert("Please enter your password");
+		return false;
+	}
+	if(p1 == ""){
+		alert("confirm your password");
+		return false;
+	}
+	if(f1 == ""){
+		alert("Please enter your last marksheet");
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<form name="regForm" method="post" action="" onsubmit="return formvalidate()">
+<table>
+<tbody>
+<tr>
+<td style="width:160px;">First Name <span class="red">*</span></td>
+<td style="width:10px;">:</td>
+<td><input type="text" name="fname" id="fname">
+<div id="msg-fname" class="red"></div>
+</td>
+<td>Last Name</td>
+<td>:</td>
+<td><input type="text" name="lname" id="lname">
+<div id="msg-lname" class="red"></div></td></tr>
+<tr><td>Father's Name</td>
+<td>:</td>
+<td><input type="text" name="fhname" id="fhname"></td></tr>
+<tr><td>Mother's Name</td>
+<td>:</td>
+<td><input type="text" name="mhname" id="mhname"></td></tr>
+<p><tr><td>Address</td>
+<td>:</td>
+<td><textarea name="add" id="add"></textarea></td></tr>
+<tr><td>City</td>
+<td>:</td>
+<td><input type="text" name="cname" id="cname"></td></tr>
+<tr><td>State</td>
+<td>:</td>
+<td><input type="text" name="sname" id="sname"></td></tr>
+<tr><td>Phone Number</td>
+<td>:</td>
+<td><input type="number" name="phoneNumber" id="phoneNumber"></td></tr>
+<tr><td>PIN Code</td>
+<td>:</td>
+<td><input type="text" name="PinCode" id="PinCode"></td></tr>
+<tr><td>Country</td>
+<td>:</td>
+<td><select name="country" id="country">
+<option value="0">select</option>
+<option value="india">India</option>
+<option value="UAE">UAE</option>	`
+<option value="UK">UK</option>
+<option value="USA">USA</option>
+</select></td></tr>
+<tr><td>Gender</td>
+<td>:</td>
+<td><input type="radio" value="1" name="gender">Female
+<input type="radio" value="2" name="gender">Male</td></tr>
+<tr><td>Religion</td>
+<td>:</td>
+<td><select name="Relegion" id="Religion">
+<option value="0">select</option>
+<option value="Hinduism">Hinduism</option>
+<option value="Muslim">Muslim</option>	`
+<option value="christisn">Christian</option>
+<option value="Other">Other</option>
+</select></td></tr>
+<tr><td>Relationship</td>
+<td>:</td>
+<td><select name="Relation" id="Relation">
+<option value="0">select</option>
+<option value="Unmarried">Unmarried</option>
+<option value="Married">Married</option>	`
+<option value="widow">widow</option>
+<option value="Other">Other</option>
+</select></td></tr>
+<tr><td>DOB</td>
+<td>:</td>
+<td><input type="text" name="DOB" id="DOB"></td></tr>
+<tr><td>Email Id</td>
+<td>:</td>
+<td><input type="text" name="email" id="email"></td></tr>
+<p><td>Enter Passaword</td>
+<td>:</td>
+<td><input type="password" name="p" id="p" placeholder="Enter your password"</td></tr>
+<p><td>Confirm Passaword</td>
+<td>:</td>
+<td><input type="password" name="p1" id="p1" placeholder="confirm your password"</td></tr>
+<tr>
+<td>Enter your last marksheet</td>
+<td>:</td>
+<td><input type="file" name="f1" id="f1" placeholder="select from drive or system"></td>
+</tr>
+<tr>
+<td>Subject</td>
+<td>:</td>
+<td><input type="checkbox" name="s1">C programming
+<input type="checkbox" name="s1">Java
+<input type="checkbox" name="s1">Networking
+<input type="checkbox" name="s1">DBMS
+<input type="checkbox" name="s1">Software Engineering</td>
+</tr>
+<td colspan="2">     </td>
+
+<td><input type="submit" name="save" value="save">
+<input type="reset" name="r" value="cancel"></td>
+
+</tbody>
+</table>
+</form>
+</body>
+</html>
