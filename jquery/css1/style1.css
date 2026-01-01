@@ -1,0 +1,17 @@
+body{
+	background: #66ccff;
+}
+.blue{color:green;}
+input[type="text"]{
+	border : 1px solid #333; width:100%;
+}
+.display-none{display:none;}
+.btn {
+	background:#ff4d4d;
+	border:1px solid #ff1a1a;
+	color:#fff;
+	padding:5px 12px;
+	text-decoration:none;
+	border-radius:5px;
+}
+.btn:hover{background:#ff8080;}

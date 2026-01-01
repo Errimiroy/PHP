@@ -1,0 +1,5 @@
+body{background:yellow;}
+.red {color:#f00;}
+input[type="text"]{
+	border : 1px solid #333; width:100%;
+}
